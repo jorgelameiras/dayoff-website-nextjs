@@ -2,26 +2,157 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================
+   CASAFRESH — CSS Variables & Global Styles
+   ============================================ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary-900: #0A1F1A;
+  --color-primary-800: #132E26;
+  --color-primary-700: #1B3D32;
+  --color-primary-600: #234C3E;
+  --color-primary-500: #2C5B4A;
+  --color-primary-400: #4A7D6A;
+  --color-primary-300: #6B9F8C;
+  --color-primary-200: #9BC4B5;
+  --color-primary-100: #CBE3DA;
+  --color-primary-50: #EAF4F0;
+
+  --color-accent-700: #3F7A1E;
+  --color-accent-600: #4E9A25;
+  --color-accent-500: #63D866;
+  --color-accent-400: #7EE580;
+  --color-accent-300: #9AED9C;
+  --color-accent-200: #B8F4B9;
+  --color-accent-100: #D6FAD7;
+  --color-accent-50: #EDFDED;
+
+  --color-warm-700: #786038;
+  --color-warm-600: #967C4A;
+  --color-warm-500: #B49A60;
+  --color-warm-300: #D9CA9E;
+  --color-warm-200: #E8DDBF;
+  --color-warm-100: #F3EEDF;
+  --color-warm-50: #FAF8F2;
+
+  --color-cool-700: #1E4066;
+  --color-cool-600: #285382;
+  --color-cool-500: #3A7BC8;
+  --color-cool-400: #5E96D6;
+  --color-cool-300: #82B1E4;
+  --color-cool-100: #D0E5F8;
+  --color-cool-50: #EBF3FC;
+
+  --color-neutral-900: #1A1A1A;
+  --color-neutral-800: #2E2E2E;
+  --color-neutral-700: #424242;
+  --color-neutral-600: #5C5C5C;
+  --color-neutral-500: #787878;
+  --color-neutral-400: #9E9E9E;
+  --color-neutral-300: #C2C2C2;
+  --color-neutral-200: #E0E0E0;
+  --color-neutral-100: #F0F0F0;
+  --color-neutral-50: #F8F8F8;
+
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --nav-height: 80px;
+  --max-width: 1280px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  color: var(--color-neutral-900);
+  background: #ffffff;
+  overflow-x: hidden;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-primary-300); border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-primary-400); }
+
+/* Reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.75s var(--ease-out), transform 0.75s var(--ease-out);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-36px);
+  transition: opacity 0.75s var(--ease-out), transform 0.75s var(--ease-out);
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(36px);
+  transition: opacity 0.75s var(--ease-out), transform 0.75s var(--ease-out);
+}
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 30s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Float animations for hero */
+@keyframes floatItem {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(6deg); }
+}
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+  50% { opacity: 1; transform: translateX(-50%) scale(1.12); }
+}
+@keyframes floatHouse {
+  0%, 100% { transform: rotateY(-12deg) rotateX(4deg) translateY(0); }
+  50% { transform: rotateY(-12deg) rotateX(4deg) translateY(-18px); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes successPop {
+  0% { transform: scale(0.5); opacity: 0; }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
 }

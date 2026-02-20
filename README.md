@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CasaFresh Website — Next.js
+
+Full-stack marketing and booking website for CasaFresh, built with Next.js and Supabase.
+
+## What It Does
+
+An upgraded version of the CasaFresh marketing site with a backend, booking flow, and database integration via Supabase.
+
+## Features
+
+- Modern marketing landing page
+- Service pages (cleaning + AC maintenance)
+- Client booking/quote request form
+- Supabase backend for storing form submissions
+- Mobile-first, responsive design
+- Tailwind CSS styling system
+
+## Tech Stack
+
+- **Next.js** — React full-stack framework
+- **TypeScript** — type safety
+- **Tailwind CSS** — utility-first styling
+- **Supabase** — backend database and auth
 
 ## Getting Started
 
-First, run the development server:
+```bash
+npm install
+```
+
+Copy `.env.local.example` to `.env.local` and fill in your Supabase credentials:
+
+```
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+Then run:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable | Description |
+|---|---|
+| `NEXT_PUBLIC_SUPABASE_URL` | Your Supabase project URL |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Your Supabase anonymous key |
 
-## Learn More
+## Business Context
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+CasaFresh offers vacation home cleaning + AC maintenance in Florida. This site is the primary client-facing marketing and booking platform.
