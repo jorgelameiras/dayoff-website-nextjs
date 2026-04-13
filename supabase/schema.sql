@@ -1,4 +1,4 @@
--- CasaFresh Leads Table
+-- DayOff Leads Table
 -- Run this in your Supabase SQL editor to create the leads table
 
 CREATE TABLE IF NOT EXISTS leads (
@@ -25,5 +25,5 @@ CREATE INDEX IF NOT EXISTS leads_email_idx ON leads (email);
 -- Allow service role to insert (this is handled via service role key in API)
 -- No public read access needed
 
-COMMENT ON TABLE leads IS 'CasaFresh lead registrations from website contact form';
+COMMENT ON TABLE leads IS 'DayOff lead registrations from website contact form';
 COMMENT ON COLUMN leads.status IS 'Lead status: new, contacted, quoted, converted, lost';

@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
 
     // If Supabase is not configured, log and return success (dev mode)
     if (!supabaseAdmin) {
-      console.log('[CasaFresh] Supabase not configured. Lead data received:', {
+      console.log('[DayOff] Supabase not configured. Lead data received:', {
         full_name: body.full_name,
         email: body.email,
         phone: body.phone,
@@ -73,7 +73,7 @@ export async function POST(request: NextRequest) {
     ])
 
     if (dbError) {
-      console.error('[CasaFresh] Supabase insert error:', dbError)
+      console.error('[DayOff] Supabase insert error:', dbError)
       return NextResponse.json(
         { error: 'Failed to save your request. Please try again.' },
         { status: 500 }
@@ -82,7 +82,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ success: true })
   } catch (err) {
-    console.error('[CasaFresh] API error:', err)
+    console.error('[DayOff] API error:', err)
     return NextResponse.json(
       { error: 'An unexpected error occurred. Please try again.' },
       { status: 500 }

@@ -89,14 +89,24 @@ export default function Nav() {
             alignItems: 'center',
             gap: '0.5rem',
             fontWeight: 600,
-            fontSize: '0.75rem',
-            padding: '0.5rem 1rem',
+            fontSize: '0.875rem',
+            padding: '0.5rem 1.25rem',
             borderRadius: '9999px',
             background: 'var(--color-accent-500)',
             color: 'var(--color-primary-900)',
             textDecoration: 'none',
             transition: 'all 300ms',
             flexShrink: 0,
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = 'var(--color-accent-400)'
+            e.currentTarget.style.transform = 'translateY(-1px)'
+            e.currentTarget.style.boxShadow = '0 4px 14px rgba(99,216,102,0.4)'
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = 'var(--color-accent-500)'
+            e.currentTarget.style.transform = 'none'
+            e.currentTarget.style.boxShadow = 'none'
           }}
         >
           Book Now

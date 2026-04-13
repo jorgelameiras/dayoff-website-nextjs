@@ -75,7 +75,7 @@ export default function Footer() {
               Professional vacation home cleaning and AC maintenance across Central Florida. Fresh homes, happy guests.
             </p>
 
-            {['📧 hello@casafresh.com', '📞 (407) 555-0100', '📍 Orlando, FL'].map((item) => (
+            {['📧 hello@dayoff.com', '📞 (407) 555-0100', '📍 Orlando, FL'].map((item) => (
               <div
                 key={item}
                 style={{
@@ -212,7 +212,7 @@ export default function Footer() {
           }}
           className="footer-bottom-layout"
         >
-          <span>© 2025 CasaFresh. All rights reserved. Licensed & Insured in Florida.</span>
+          <span>© 2026 DayOff. All rights reserved. Licensed & Insured in Florida.</span>
           <div style={{ display: 'flex', gap: '0.75rem' }}>
             {['IG', 'FB', 'X'].map((social) => (
               <a

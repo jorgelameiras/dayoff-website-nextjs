@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* ============================================
-   CASAFRESH — CSS Variables & Global Styles
+   DAYOFF — CSS Variables & Global Styles
    ============================================ */
 
 :root {
@@ -54,9 +54,9 @@
   --color-neutral-100: #F0F0F0;
   --color-neutral-50: #F8F8F8;
 
-  --font-display: 'DM Serif Display', Georgia, serif;
-  --font-body: 'Inter', -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-display: var(--font-display-next), 'DM Serif Display', Georgia, serif;
+  --font-body: var(--font-body-next), 'Inter', -apple-system, sans-serif;
+  --font-mono: var(--font-mono-next), 'JetBrains Mono', monospace;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --duration-fast: 150ms;

@@ -41,7 +41,7 @@ export default function TrustBadges() {
               style={{
                 fontFamily: 'var(--font-display)',
                 fontSize: 'clamp(1.25rem, 2.5vw, 2rem)',
-                color: 'var(--color-primary-600)',
+                color: 'var(--color-primary-300)',
                 whiteSpace: 'nowrap',
                 padding: '0 2rem',
               }}

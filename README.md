@@ -1,10 +1,10 @@
-# CasaFresh Website — Next.js
+# DayOff Website — Next.js
 
-Full-stack marketing and booking website for CasaFresh, built with Next.js and Supabase.
+Full-stack marketing and booking website for DayOff, built with Next.js and Supabase.
 
 ## What It Does
 
-An upgraded version of the CasaFresh marketing site with a backend, booking flow, and database integration via Supabase.
+An upgraded version of the DayOff marketing site with a backend, booking flow, and database integration via Supabase.
 
 ## Features
 
@@ -52,4 +52,4 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ## Business Context
 
-CasaFresh offers vacation home cleaning + AC maintenance in Florida. This site is the primary client-facing marketing and booking platform.
+DayOff offers vacation home cleaning + AC maintenance in Florida. This site is the primary client-facing marketing and booking platform.

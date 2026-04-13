@@ -13,7 +13,7 @@ import RegistrationForm from '@/components/RegistrationForm'
 import Footer from '@/components/Footer'
 
 const contactDetails = [
-  { icon: '📧', label: 'Email', value: 'hello@casafresh.com', href: 'mailto:hello@casafresh.com' },
+  { icon: '📧', label: 'Email', value: 'hello@dayoff.com', href: 'mailto:hello@dayoff.com' },
   { icon: '📞', label: 'Phone', value: '(407) 555-0100', href: 'tel:+14075550100' },
   { icon: '📍', label: 'Location', value: 'Central Florida', href: undefined },
   { icon: '🕐', label: 'Hours', value: 'Mon–Sun, 7am–8pm EST', href: undefined },
@@ -40,6 +40,7 @@ export default function Home() {
         style={{
           padding: '8rem clamp(1rem, 4vw, 2rem)',
           background: 'var(--color-warm-50)',
+          borderTop: '1px solid var(--color-warm-200)',
           position: 'relative',
         }}
       >
@@ -244,7 +245,7 @@ export default function Home() {
               lineHeight: 1.75,
             }}
           >
-            Join 500+ vacation property owners who trust CasaFresh to keep their homes spotless and cool.
+            Join 500+ vacation property owners who trust DayOff to keep their homes spotless and cool.
           </p>
           <div
             style={{
@@ -267,6 +268,17 @@ export default function Home() {
                 color: 'var(--color-primary-900)',
                 textDecoration: 'none',
                 boxShadow: '0 4px 16px rgba(99,216,102,0.4)',
+                transition: 'all 300ms',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'var(--color-accent-400)'
+                e.currentTarget.style.boxShadow = '0 6px 24px rgba(99,216,102,0.55)'
+                e.currentTarget.style.transform = 'translateY(-1px)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'var(--color-accent-500)'
+                e.currentTarget.style.boxShadow = '0 4px 16px rgba(99,216,102,0.4)'
+                e.currentTarget.style.transform = 'none'
               }}
             >
               Get My Free Quote
@@ -284,6 +296,15 @@ export default function Home() {
                 color: '#ffffff',
                 border: '1.5px solid rgba(255,255,255,0.3)',
                 textDecoration: 'none',
+                transition: 'all 300ms',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.7)'
+                e.currentTarget.style.background = 'rgba(255,255,255,0.06)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'
+                e.currentTarget.style.background = 'transparent'
               }}
             >
               View Services

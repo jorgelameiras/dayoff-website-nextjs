@@ -24,15 +24,15 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'CasaFresh — Vacation Home Cleaning & AC Maintenance | Central Florida',
+  title: 'DayOff — Vacation Home Cleaning & AC Maintenance | Central Florida',
   description:
     'Professional vacation home cleaning and AC maintenance in Central Florida. Serving Orlando, Kissimmee, Daytona Beach & Tampa. Fresh homes, happy guests.',
   keywords: 'vacation rental cleaning, AC maintenance, Central Florida, Orlando, Kissimmee, property management',
   openGraph: {
     type: 'website',
-    title: 'CasaFresh — Vacation Home Cleaning & AC Maintenance | Central Florida',
+    title: 'DayOff — Vacation Home Cleaning & AC Maintenance | Central Florida',
     description: 'Professional vacation home cleaning and AC maintenance in Central Florida. Fresh homes, happy guests.',
-    url: 'https://casafresh.com',
+    url: 'https://dayoff.com',
   },
 }
 

@@ -170,7 +170,7 @@ export default function FAQ() {
 
                 <div
                   style={{
-                    maxHeight: isOpen ? '200px' : '0',
+                    maxHeight: isOpen ? '500px' : '0',
                     overflow: 'hidden',
                     transition: 'max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
                   }}

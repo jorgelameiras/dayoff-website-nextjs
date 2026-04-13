@@ -117,6 +117,16 @@ export default function Hero() {
                 boxShadow: '0 4px 16px rgba(99,216,102,0.4)',
                 transition: 'all 300ms',
               }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'var(--color-accent-400)'
+                e.currentTarget.style.boxShadow = '0 6px 24px rgba(99,216,102,0.55)'
+                e.currentTarget.style.transform = 'translateY(-1px)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'var(--color-accent-500)'
+                e.currentTarget.style.boxShadow = '0 4px 16px rgba(99,216,102,0.4)'
+                e.currentTarget.style.transform = 'none'
+              }}
             >
               Book a Cleaning
             </a>
@@ -134,6 +144,14 @@ export default function Hero() {
                 border: '1.5px solid rgba(255,255,255,0.3)',
                 textDecoration: 'none',
                 transition: 'all 300ms',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.7)'
+                e.currentTarget.style.background = 'rgba(255,255,255,0.06)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'
+                e.currentTarget.style.background = 'transparent'
               }}
             >
               Our Services ↓

@@ -105,7 +105,7 @@ export default function AboutSection() {
                 marginBottom: '1rem',
               }}
             >
-              Why CasaFresh
+              Why DayOff
             </div>
             <h2
               style={{
